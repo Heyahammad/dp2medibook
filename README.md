@@ -1,4 +1,3 @@
-
 <h1 align="center">🩺 MediBook: Doctor Appointment System 🏥</h1>
 
 <p align="center">
