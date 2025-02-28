@@ -8,7 +8,7 @@
 
 ---
 ## Contributors:
-Md. Faisal Ahammad (223014006)
+Md. Faisal Ahammad (223014006) Scrum Master
 
 Mst Sania Akhter (221014006)
 
@@ -30,7 +30,7 @@ MediBook is a **modern web-based doctor appointment booking system** designed to
 ✅ Secure JWT-based authentication  
 ✅ Search & filter doctors (by specialty, location, availability)  
 ✅ Book, reschedule & cancel appointments  
-✅ Secure **bKash payment integration**  
+✅ Secure **payment integration**  
 ✅ View doctor profiles, reviews & ratings  
 
 ### 👨‍⚕️ For Doctors
@@ -64,7 +64,7 @@ MediBook is a **modern web-based doctor appointment booking system** designed to
 | **Backend**         | Node.js, Express.js                 |
 | **Database**        | MongoDB Atlas                       |
 | **Authentication**  | JWT, bcrypt                         |
-| **Payment Gateway** | bKash API                           |
+| **Payment Gateway** | Integrated Payment System           |
 | **Deployment**      | Vercel (Frontend), Render (Backend) |
 
 ---
@@ -86,4 +86,4 @@ MediBook follows a **modular and scalable** architecture:
 ### 🔹 Prerequisites:
 - ✅ Node.js & npm installed  
 - ✅ MongoDB Atlas account  
-- ✅ bKash API credentials  
+- ✅ Payment API credentials  
