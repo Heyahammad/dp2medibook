@@ -22,7 +22,7 @@ const Feedback = () => {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
+        <div className="flex items-center justify-center min-h-screen p-4">
             <div className="bg-white p-6 rounded-2xl shadow-xl max-w-lg w-full text-center">
                 <h2 className="text-2xl font-semibold text-gray-800 mb-4">Give Your Feedback</h2>
 
@@ -79,8 +79,8 @@ const Feedback = () => {
                 {/* Submit Button */}
                 <button
                     className={`mt-4 w-full py-2 rounded-lg text-white transition-all ${!name || !email || !phone || !rating || !feedback.trim()
-                            ? "bg-gray-400 cursor-not-allowed"
-                            : "bg-blue-500 hover:bg-blue-600"
+                        ? "bg-gray-400 cursor-not-allowed"
+                        : "bg-blue-500 hover:bg-blue-600"
                         }`}
                     onClick={handleSubmit}
                     disabled={!name || !email || !phone || !rating || !feedback.trim()}
