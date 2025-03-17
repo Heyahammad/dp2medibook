@@ -40,7 +40,7 @@ const Footer = () => {
                         <li className="hover:text-primary cursor-pointer transition duration-300">
                             Home
                         </li>
-                        <li className="hover:text-primary cursor-pointer transition duration-300">
+                        <li className="hover:text-red cursor-pointer transition duration-300">
                             About Us
                         </li>
                         <li className="hover:text-primary cursor-pointer transition duration-300">
@@ -59,7 +59,7 @@ const Footer = () => {
                     </p>
                     <ul className="flex flex-col gap-3 text-offwhite">
                         <li className="flex items-center gap-2 hover:text-primary cursor-pointer transition duration-300">
-                            <FaPhoneAlt /> +880123456789
+                            <FaPhoneAlt /> +8801571299965
                         </li>
                         <li className="flex items-center gap-2 hover:text-primary cursor-pointer transition duration-300">
                             <FaEnvelope /> heyahammad@gmail.com
@@ -69,7 +69,7 @@ const Footer = () => {
                     {/* Social Icons */}
                     <div className="flex justify-center sm:justify-start gap-6 mt-5">
                         <a
-                            href="#"
+                            href=""
                             className="text-offwhite hover:text-facebook transition duration-300"
                         >
                             <FaFacebookF className="text-2xl" />

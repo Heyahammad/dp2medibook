@@ -42,7 +42,7 @@ function Header() {
         <img
           className="w-full md:absolute bottom-0 h-auto rounded-lg"
           src={assets.homedoctor2}
-          alt="Header Illustration"
+          alt="Pic"
         />
       </div>
     </div>

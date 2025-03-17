@@ -155,13 +155,13 @@ export const doctors = [
   },
   {
     _id: "doc5",
-    name: "Dr. Jennifer Garcia",
+    name: "Dr. Sania Akhter",
     image: doc5,
     speciality: "Neurologist",
     degree: "MBBS",
     experience: "4 Years",
     about:
-      "Dr. Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.",
+      "Dr. Sania has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.",
     fees: 50,
     address: {
       line1: "30/15/B",

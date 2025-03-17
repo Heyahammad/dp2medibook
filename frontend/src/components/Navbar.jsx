@@ -94,19 +94,19 @@ const Navbar = () => {
             <div className="flex justify-center gap-6 ">
               <a
                 href="https://facebook.com/heyahammadhere"
-                className="animate-neon transition duration-300"
+                className="text-red"
               >
                 <FaFacebook className="text-4xl" />
               </a>
               <a
                 href="https://github.com/heyahammad"
-                className="animate-neon transition duration-300"
+                className="text-red"
               >
                 <FaGithub className="text-4xl" />
               </a>
               <a
                 href="https://Instagram.com/ahammadgram"
-                className="animate-neon transition duration-300"
+                className="text-red"
               >
                 <FaInstagram className="text-4xl" />
               </a>
