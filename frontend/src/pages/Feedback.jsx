@@ -34,8 +34,6 @@ const Feedback = () => {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                 />
-
-                {/* Email Input */}
                 <input
                     type="email"
                     className="w-full p-3 border-2 border-gray-300 rounded-full mb-3 hover:border-primary focus:border-primary outline-none"
@@ -44,7 +42,6 @@ const Feedback = () => {
                     onChange={(e) => setEmail(e.target.value)}
                 />
 
-                {/* Phone Input */}
                 <input
                     type="tel"
                     className="w-full p-3 border-2 border-gray-300 rounded-full mb-3 hover:border-primary focus:border-primary outline-none"
