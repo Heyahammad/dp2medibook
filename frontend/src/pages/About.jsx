@@ -6,9 +6,9 @@ const About = () => {
             <h1 className="text-3xl font-bold text-center mb-6 text-blue-900">About Us</h1>
             <div className="flex items-center space-x-8">
                 <div className="w-1/3">
-                    <img 
-                        src="https://via.placeholder.com/300" 
-                        alt="About Us" 
+                    <img
+                        src="https://via.placeholder.com/300"
+                        alt="About Us"
                         className="w-full h-auto rounded-lg shadow-lg"
                     />
                 </div>
