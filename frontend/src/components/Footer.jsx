@@ -118,7 +118,7 @@ const Footer = () => {
 
             <div className="mt-12 border-t border-offwhite pt-6">
                 <p className="text-center text-sm text-offwhite">
-                    Copyright 2024 @heyahammad - All Rights Reserved.
+                    Copyright 2025 @heyahammad - All Rights Reserved.
                 </p>
 
             </div>
