@@ -6,12 +6,10 @@ import { toast } from 'react-toastify'
 import { assets } from '../assets/assets'
 
 const MyAppointments = () => {
-
     const { backendUrl, token } = useContext(AppContext)
     const navigate = useNavigate()
 
     const [appointments, setAppointments] = useState([])
-    const [payment, setPayment] = useState('')
 
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
@@ -22,22 +20,21 @@ const MyAppointments = () => {
 
     const getUserAppointments = async () => {
         try {
-
             const { data } = await axios.get(backendUrl + '/api/user/appointments', { headers: { token } })
             setAppointments(data.appointments.reverse())
-
         } catch (error) {
             console.log(error)
             toast.error(error.message)
         }
     }
 
-    // Function to cancel appointment Using API
     const cancelAppointment = async (appointmentId) => {
-
         try {
-
-            const { data } = await axios.post(backendUrl + '/api/user/cancel-appointment', { appointmentId }, { headers: { token } })
+            const { data } = await axios.post(
+                backendUrl + '/api/user/cancel-appointment',
+                { appointmentId },
+                { headers: { token } }
+            )
 
             if (data.success) {
                 toast.success(data.message)
@@ -45,15 +42,15 @@ const MyAppointments = () => {
             } else {
                 toast.error(data.message)
             }
-
         } catch (error) {
             console.log(error)
             toast.error(error.message)
         }
-
     }
 
-
+    const handlePaymentClick = (appointmentId) => {
+        navigate(`/payment`)
+    }
 
     useEffect(() => {
         if (token) {
@@ -78,10 +75,29 @@ const MyAppointments = () => {
                             <p className=''>{item.docData.address.line2}</p>
                             <p className=' mt-1'><span className='text-sm text-[#3C3C3C] font-medium'>Date & Time:</span> {slotDateFormat(item.slotDate)} |  {item.slotTime}</p>
                         </div>
-
                         <div className='flex flex-col gap-2 justify-end text-sm text-center'>
-                            {!item.cancelled && !item.isCompleted && <button onClick={() => cancelAppointment(item._id)} className='text-[#696969] sm:min-w-48 py-2 border rounded hover:bg-red-600 hover:text-white transition-all duration-300'>Cancel appointment</button>}
-                            {item.cancelled && !item.isCompleted && <button className='sm:min-w-48 py-2 border border-red-500 rounded text-red-500'>Appointment cancelled</button>}
+                            {!item.cancelled && !item.isCompleted && !item.paid && (
+                                <button
+                                    onClick={() => handlePaymentClick(item._id)}
+                                    className="sm:min-w-48 py-2 border rounded text-white bg-primary2 hover:bg-blue-900 transition-all duration-300"
+                                >
+                                    Pay Now
+                                </button>
+                            )}
+
+                            {!item.cancelled && !item.isCompleted && (
+                                <button
+                                    onClick={() => cancelAppointment(item._id)}
+                                    className='text-[#696969] sm:min-w-48 py-2 border rounded hover:bg-red-600 hover:text-white transition-all duration-300'
+                                >
+                                    Cancel appointment
+                                </button>
+                            )}
+                            {item.cancelled && !item.isCompleted && (
+                                <button className='sm:min-w-48 py-2 border border-red-500 rounded text-red-500'>
+                                    Appointment cancelled
+                                </button>
+                            )}
                         </div>
                     </div>
                 ))}
@@ -91,5 +107,3 @@ const MyAppointments = () => {
 }
 
 export default MyAppointments
-
-
